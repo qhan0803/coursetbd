@@ -1,0 +1,372 @@
+
+
+
+<header>
+
+
+
+	<div id="header">
+
+	<div class = 'navbar'>
+	<img class = 'logo' src = 'http://adapt.to/content/dam/adaptto/production/teaserbar/schedule.png/_jcr_content/renditions/original./schedule.png'>
+	</img>
+
+      <a href="" id="logo_text">
+        COURSE TBD 
+      </a>
+
+
+	{{#if user}}
+	<div class = 'nav_links'>
+
+
+<div class="dropdown">
+  <button type="submit" class="username dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" on = '0'>
+  	   <i class="fa fa-user-secret fa-2x"></i></br>
+       
+   {{firstname}} <i class="fa fa-caret-down fa-x"></i>
+ 
+  </button>
+ <ul class="dropdown-menu username_bar" aria-labelledby="dropdownMenu1">
+ 	<li><a href="#" class = 'setting'data-toggle="modal" data-target="#setting_modal" >Setting &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class='fa fa-cog'></i></a></li>
+ 
+    <li><a href="#" class = "ta_authorization" data-toggle="modal" data-target="#ta_authorization_modal">Become TA &nbsp&nbsp <i class='fa fa-user-secret'></i></a></li>
+    <li role="separator" class="divider"></li>
+       <li><a href="" class = 'logout'>Log Out &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<i class='fa fa-sign-out'></i></a></li>
+    </ul>
+</div>
+
+ <!-- Setting Modal -->
+<div class="modal fade" id="setting_modal" tabindex="-1" role="dialog" aria-labelledby="setting_modalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="setting_modalLabel">Setting</h4>
+      </div>
+      <div class="modal-body">
+        <form >
+          
+
+          
+
+    <div class="form-group">
+            <label for="recipient-name" class=" control-label">Old Password(*):</label>
+
+            <input type="password" class="form-control setting_password_old" id="setting_password_old">
+        
+          
+  </div>
+
+<div class="form-group">
+            <label for="recipient-name" class=" control-label">New Password:</label>
+
+            <input type="password" class="form-control setting_password setting_input" id="setting_password setting_input">
+        
+          
+  </div>
+  <div class="form-group">
+            <label for="recipient-name" class=" control-label">Confirm New Password:</label>
+
+            <input type="password" class="form-control setting_password_confirm setting_input" id="setting_password_confirm setting_input">
+        
+          
+  </div>
+
+<div class="form-group">
+            <label for="recipient-name" class=" control-label">New First Name:</label>
+
+            <input type="text" class="form-control setting_first_name setting_input" id="setting_first_name setting_input">
+        
+          
+  </div>
+
+<div class="form-group">
+            <label for="recipient-name" class=" control-label">New Last Name:</label>
+
+            <input type="text" class="form-control setting_last_name setting_input" id="setting_last_name setting_input">
+        
+          
+  </div>
+  
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+          
+
+        <div class = "setting_error error"> </div>
+
+          <button type="button" class="btn btn-primary setting_submit">Submit</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- TA Modal -->
+
+<div class="modal fade" id="ta_authorization_modal" tabindex="-1" role="dialog" aria-labelledby="ta_authorization_modalLabel">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ta_authorization_modalLabel">TA Authorization</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          
+
+          
+
+    <div class="form-group">
+            <label for="recipient-name" class="col-sm-5 control-label">Course ID:</label>
+                          <div class="col-sm-6">
+
+            <input type="text" class="form-control ta_class_authorization" id="ta_class_authorization">
+        
+          </div>
+  </div>
+
+  
+  <div class="form-group">
+
+            <label for="message-text" class="col-sm-5 control-label">Passcode:</label>
+                          <div class="col-sm-6">
+
+            <input type="password" class="form-control activation_code" id="message-text"></textarea>
+          </div>
+          </div>
+       
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+          <div class = "error"> </div>
+
+          <button type="button" class="btn btn-primary ta_authorization_submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- notification dropdown -->
+<div class="dropdown">
+  <button type="submit" class="notification dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#" href="/page.html" on = '0'>
+      <i class="fa fa-bell fa-2x"></i> </br> Notification <i class="fa fa-caret-down fa-x"></i>
+     
+<div id='notification' class="notification_count">0</div>
+  </button>
+ <ul class="dropdown-menu notification_dropdown" aria-labelledby="dropdownMenu1">
+ 
+<div class="notification_content">
+
+</div>
+
+
+  </ul>
+</div>
+
+	
+
+	
+	
+<!-- 
+	<button type="submit" class = 'notification' on = '0'><i class="fa fa-bell fa-2x"></i></i></br>	Notification </button>
+ -->
+
+	<button type="submit" id = "request"class = 'friends_requests' on = '0'><i class='fa fa-user-plus fa-2x'></i>  </br>Requests      
+    <div id='notification2' class="request_count">5</div>
+</button>
+
+	<button type="submit" id='friends_list_color'class = 'friends_list' on = '0'><i class='fa fa-heart fa-2x'></i></br>Friends </button>
+
+<!-- quick add -->
+
+  <button type="submit" class = 'quick_add' on = '0' data-toggle="modal" data-target="#quick_add_modal"><i class="fa fa-calendar-plus-o fa-2x"></i></br>  Add Event </button>
+
+  <!-- quick_add Modal -->
+<div class="modal fade" id="quick_add_modal" tabindex="-1" role="dialog" aria-labelledby="quick_add_modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="quick_add_modalLabel">Create Event</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          
+        <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Title(*):</label>
+                          <div class="col-sm-10">
+
+            <input type="text" class="form-control personal_title" id="personal_title" maxlength="30">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Date and Time(*): </label>
+                          <div class="col-sm-7">
+
+            <input type="datetime-local" class="form-control personal_date_and_time" id="personal_date_and_time" max="2029-12-31T23:59:59">
+          </div>
+          <div class = "col-sm-3">
+          <div class="checkbox">
+              <label><input type="checkbox" value="" class = "personal_repeat">Repeat Weekly</label>
+          </div>
+        </div>
+
+  </div>
+
+
+   <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Duration:</label>
+              <div class="col-sm-10">
+
+        <div class="input-group">
+  <input type="number" min="0" max="500" class="form-control personal_duration" id="personal_duration" aria-describedby="basic-addon2" >
+  <span class="input-group-addon" id="basic-addon2">minutes</span>
+</div>
+</div>
+  </div>  
+
+    <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Location:</label>
+                          <div class="col-sm-10">
+
+            <input type="text" class="form-control personal_location" id="personal_location">
+          </div>
+  </div>
+
+  
+          <div class="form-group">
+
+            <label for="message-text" class="col-sm-2 control-label">Description:</label>
+                          <div class="col-sm-10">
+
+            <textarea class="form-control personal_description" id="message-text"></textarea>
+          </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+          <div class = "error"> </div>
+
+          <button type="button" class="btn btn-primary add_event">Add </button>
+         
+
+      </div>
+    </div>
+  </div>
+</div>
+	
+
+	{{#if TA}}
+	
+  <button type="submit" class = 'ta_portal' on = '0' data-toggle="modal" data-target="#ta_portal_modal"><i class="fa fa-bullhorn fa-2x fa-flip-horizontal"></i></br>  TA Portal </button>
+
+  <!-- Modal -->
+<div class="modal fade" id="ta_portal_modal" tabindex="-1" role="dialog" aria-labelledby="ta_portal_modalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="ta_portal_modalLabel">Announcement</h4>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Class:</label>
+
+              <div class="col-sm-10">
+                <select class="form-control ta_class"></select>
+           </div>
+
+
+          </div>
+
+          <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Type:</label>
+                          <div class="col-sm-10">
+
+            <select class="form-control ta_type">
+          <option>Pset Due</option>
+          <option>Office Hour</option>
+        <option>Review Session</option>
+          <option>Exam</option>
+      </select>
+    </div>
+      </div>
+
+    <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Location(*):</label>
+                          <div class="col-sm-10">
+
+            <input type="text" class="form-control ta_location" id="location">
+          </div>
+  </div>
+
+  <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Date and Time(*): </label>
+                          <div class="col-sm-7">
+
+            <input type="datetime-local" class="form-control ta_date_and_time" id="date_and_time" max="2029-12-31T23:59:59">
+          </div>
+          <div class="col-sm-3">
+           <div class="checkbox">
+              <label><input type="checkbox" value="" class = "ta_repeat">Repeat Weekly</label>
+          </div>
+        </div>
+  </div>
+   <div class="form-group">
+            <label for="recipient-name" class="col-sm-2 control-label">Duration:</label>
+              <div class="col-sm-10">
+
+        <div class="input-group">
+  <input type="number" min="0" max="500" class="form-control ta_duration" id="duration" aria-describedby="basic-addon2" >
+  <span class="input-group-addon" id="basic-addon2">minutes</span>
+</div>
+</div>
+  </div>
+          <div class="form-group">
+
+            <label for="message-text" class="col-sm-2 control-label">Description:</label>
+                          <div class="col-sm-10">
+
+            <textarea class="form-control ta_description" id="message-text"></textarea>
+          </div>
+          </div>
+        </form>
+      </div>
+
+
+      <div class="modal-footer">
+          <div class = "error"> </div>
+
+          <button type="button" class="btn btn-primary create_announcement">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+	{{/if}}
+
+	{{/if}}
+  
+<!-- 		<a href="#"  id="about_us" class= "about_us"> About Us </a> -->
+ 
+</div>
+	</div>
+	</div>
+</header>
+
+
+
+

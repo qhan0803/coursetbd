@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+    <meta charset="UTF-8">
+    
+ 
+
+
+    
+  <link rel='stylesheet' href='/stylesheets/home.css' />
+  
+
+
+<header>
+  <div class = 'navbar'>
+    <img class = 'logo' src = 'http://adapt.to/content/dam/adaptto/production/teaserbar/schedule.png/_jcr_content/renditions/original./schedule.png'>
+    </img>
+
+    <a href="/" id="logo_text">
+        COURSE TBD 
+    </a>
+    <a href="/about_us" id="about_us"> About Us </a>
+
+  </div>
+
+</header>
+
+
+    <section>
+       <div class="info"> 
+      <h1>COURSE TBD </h1>
+      <br><br><br>
+      <p>PEOPLE > CLASSES</p>
+        <input type="button" id="submit" value="LOG IN" class = 'btn login'>
+      <input type="button" id="submit" value="SIGN UP" class = 'btn signup'>
+    
+         </div>
+      <script src="/js/home.js"></script>
+ 
+    </section>
+
+
+  <div class = 'bar login_bar'>
+
+
+    <button type="button" class="btn-close"><i class="fa fa-times fa-2x"></i></button>
+    <fieldset>
+          <img src="http://inkd.net/design/wp-content/uploads/2014/01/hp_02b.jpg"class="img-profile">
+
+
+  <div class="field-items-login">
+
+      <div class="filled-info">
+
+    <div class = "error"></div>
+    <input type='text' placeholder='Email Address' id='login_email'class = 'login_email'> </br>
+    <input type='password' placeholder=' Password' id='login_password' class = 'login_password'></br>
+
+  </div>
+    <input type='button' id="submit_info" value='Log In' class = 'btn login_submit'></br>
+
+      <fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+</fb:login-button>
+    </br>
+  </div>
+  
+  </fieldset>
+ 
+  </div>
+
+
+
+    <div class = 'bar register_bar'>
+      <button type="button" class="btn-close"><i class="fa fa-times fa-2x"></i></button>
+    <fieldset>
+          <img src="http://inkd.net/design/wp-content/uploads/2014/01/hp_02b.jpg"class="img-profile">
+
+  <div class="field-items">
+
+    <div class="filled-info">
+      <div class = "success1"></div>
+      <div class = "success"></div>
+      <div class = "error"></div>
+      
+      <br>
+    <input type='text' placeholder='Email Address' id = 'register_email' class = 'register_email'> <div class = "error"></div></br>
+    <input type='password' placeholder='Password' id='register_password'class = 'register_password'><div class = "error"></div></br>
+    <input type='password' placeholder='Confirm Password' id ='register_password_confirm' class = 'register_password_confirm'><div class = "error"></div></br>
+    <input type='text' placeholder='First Name' id='register_first_name'class = 'register_first_name'><div class = "error"></div></br>
+    <input type='text' placeholder='Last Name' id="register_last_name"class = 'register_last_name'><div class = "error"></div></br>
+ 
+
+  </div>
+
+    <input type='button' id="submit_info"  value='Sign Up' class = 'btn register_submit'></br>
+
+      </div>
+      </fieldset>
+
+  </div>
+
+    

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Course TBD</title>
+		
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.md5.js"></script>
+		<script src='/js/moment.min.js'></script>
+		<script src='/js/fullcalendar.js'></script>
+		<script src='/js/bootstrap-notify.js'></script>
+		<script src="/js/ajax.js"></script>
+		<script src='/js/bootstrap.min.js'></script>
+		<script src='/js/facebook.js'></script>
+		
+		<link rel='stylesheet' href='/stylesheets/bootstrap.css' />
+		<link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+		
+
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+
+		
+  	
+<!--     the logo shown in tab -->
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+
+<!-- 
+<fb:login-button scope="public_profile,email,user_friends" onlogin="checkLoginState();">
+</fb:login-button>
+
+ -->
+
+
+	</head>
+	<body>
+
+		<div class="background-image"></div>
+		
+		{{#if user}}
+
+			{{> navbar_partial}}
+
+			{{> sidebar_partial}}
+			
+
+			{{> full_calendar}}
+			
+		
+
+	{{else}}
+
+			{{> home}}
+		{{/if}}
+	
+	
+	</body>
+	
+
+</html>
